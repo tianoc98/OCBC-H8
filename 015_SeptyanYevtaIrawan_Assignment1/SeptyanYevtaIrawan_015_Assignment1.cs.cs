@@ -1,6 +1,6 @@
 using System;
 
-public class Assignment1{
+public class SeptyanYevtaIrawan_015_Assignment1{
     public static void Main(string[] args){
         Console.WriteLine("==================================================");
         Console.WriteLine("Nama : Septyan Yevta Irawan");
