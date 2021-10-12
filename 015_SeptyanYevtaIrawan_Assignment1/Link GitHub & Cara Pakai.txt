@@ -1,0 +1,30 @@
+Link GitHub : https://github.com/tianoc98/OCBC-H8
+
+
+Cara Pakai Beserta contoh output : 
+
+- Run code menggunakan mono ( Klick kanan -> run code ) 
+- Akan muncul menu yang bisa di pilih oleh user 
+- Pilih menu 1-6 
+	1. Untuk Menggunakan fitur membuat segitiga alfabet , setelah user memilih menu ini user akan di minta untuk menginputkan tinggi segitiga 
+		Contoh output : user input tinggi nya 3 
+				a
+			       aba
+			      abcba
+	2. Untuk Menggunakan fitur membuat segitiga menggunakan angka , Setelah user memilih menu ini user akan di minta untuk menginputkan tinggi segitiga
+		Contoh output : user input tinggi nya 3
+				1
+			       121
+			      12321
+	3. Untuk menggunakan fitur membuat Faktorial , setelah user memilih menu ini user akan di minta untuk menginputkan suatu bilangan 
+		Contoh output : user menginputkan 4
+				1 X 2 X 3 X 4 = 24
+	4. Untuk menggunakan fitur membuat reverse String / Numeric , setelah memilih menu ini user akan di minta untuk menginputkan suatu huruf / angka
+		Contoh output : user menginputkan 123abc123
+				321cba321
+	5. Untuk menggunakan fitur membuat Convert angka 1-9 ke huruf , setelah memilih menu ini user akan di minta untuk menginputkan angka 1-9 secara berurutan
+		Contoh output : user menginputkan 156923
+				ONE FIVE SIX NINE TWO THREE 
+	6. Untuk menu nomer 6 adalah exit user akan mematikan program ini.
+
+- Jika User menginputkan angka selain 1-6 ( di luar menu ) user akan di minta untuk menginput ulang !
