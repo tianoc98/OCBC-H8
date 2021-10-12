@@ -1,0 +1,16 @@
+C:\File\OCBC NISP\C#\Sesi1\Coba\bin\Debug\net5.0\Coba.exe
+C:\File\OCBC NISP\C#\Sesi1\Coba\bin\Debug\net5.0\Coba.deps.json
+C:\File\OCBC NISP\C#\Sesi1\Coba\bin\Debug\net5.0\Coba.runtimeconfig.json
+C:\File\OCBC NISP\C#\Sesi1\Coba\bin\Debug\net5.0\Coba.runtimeconfig.dev.json
+C:\File\OCBC NISP\C#\Sesi1\Coba\bin\Debug\net5.0\Coba.dll
+C:\File\OCBC NISP\C#\Sesi1\Coba\bin\Debug\net5.0\ref\Coba.dll
+C:\File\OCBC NISP\C#\Sesi1\Coba\bin\Debug\net5.0\Coba.pdb
+C:\File\OCBC NISP\C#\Sesi1\Coba\obj\Debug\net5.0\Coba.csproj.AssemblyReference.cache
+C:\File\OCBC NISP\C#\Sesi1\Coba\obj\Debug\net5.0\Coba.GeneratedMSBuildEditorConfig.editorconfig
+C:\File\OCBC NISP\C#\Sesi1\Coba\obj\Debug\net5.0\Coba.AssemblyInfoInputs.cache
+C:\File\OCBC NISP\C#\Sesi1\Coba\obj\Debug\net5.0\Coba.AssemblyInfo.cs
+C:\File\OCBC NISP\C#\Sesi1\Coba\obj\Debug\net5.0\Coba.csproj.CoreCompileInputs.cache
+C:\File\OCBC NISP\C#\Sesi1\Coba\obj\Debug\net5.0\Coba.dll
+C:\File\OCBC NISP\C#\Sesi1\Coba\obj\Debug\net5.0\ref\Coba.dll
+C:\File\OCBC NISP\C#\Sesi1\Coba\obj\Debug\net5.0\Coba.pdb
+C:\File\OCBC NISP\C#\Sesi1\Coba\obj\Debug\net5.0\Coba.genruntimeconfig.cache

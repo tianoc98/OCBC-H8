@@ -1,0 +1,16 @@
+C:\File\OCBC NISP\C#\Sesi1\Hello\obj\Debug\net5.0\Hello.csproj.AssemblyReference.cache
+C:\File\OCBC NISP\C#\Sesi1\Hello\obj\Debug\net5.0\Hello.GeneratedMSBuildEditorConfig.editorconfig
+C:\File\OCBC NISP\C#\Sesi1\Hello\obj\Debug\net5.0\Hello.AssemblyInfoInputs.cache
+C:\File\OCBC NISP\C#\Sesi1\Hello\obj\Debug\net5.0\Hello.AssemblyInfo.cs
+C:\File\OCBC NISP\C#\Sesi1\Hello\obj\Debug\net5.0\Hello.csproj.CoreCompileInputs.cache
+C:\File\OCBC NISP\C#\Sesi1\Hello\bin\Debug\net5.0\Hello.exe
+C:\File\OCBC NISP\C#\Sesi1\Hello\bin\Debug\net5.0\Hello.deps.json
+C:\File\OCBC NISP\C#\Sesi1\Hello\bin\Debug\net5.0\Hello.runtimeconfig.json
+C:\File\OCBC NISP\C#\Sesi1\Hello\bin\Debug\net5.0\Hello.runtimeconfig.dev.json
+C:\File\OCBC NISP\C#\Sesi1\Hello\bin\Debug\net5.0\Hello.dll
+C:\File\OCBC NISP\C#\Sesi1\Hello\bin\Debug\net5.0\ref\Hello.dll
+C:\File\OCBC NISP\C#\Sesi1\Hello\bin\Debug\net5.0\Hello.pdb
+C:\File\OCBC NISP\C#\Sesi1\Hello\obj\Debug\net5.0\Hello.dll
+C:\File\OCBC NISP\C#\Sesi1\Hello\obj\Debug\net5.0\ref\Hello.dll
+C:\File\OCBC NISP\C#\Sesi1\Hello\obj\Debug\net5.0\Hello.pdb
+C:\File\OCBC NISP\C#\Sesi1\Hello\obj\Debug\net5.0\Hello.genruntimeconfig.cache
