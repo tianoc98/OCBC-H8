@@ -2,12 +2,16 @@ using System;
 
 public class Assignment1{
     public static void Main(string[] args){
+        Console.WriteLine("==================================================");
+        Console.WriteLine("Nama : Septyan Yevta Irawan");
+        Console.WriteLine("No Peserta :FSDO001ONL015");
+        Console.WriteLine("Domisili : Pati");
         Console.WriteLine("=====MAIN MENU ASSIGNMENT 1=====");
-        Console.WriteLine("1. Tugas-1");
-        Console.WriteLine("2. Tugas-2");
-        Console.WriteLine("3. Tugas-3");
-        Console.WriteLine("4. Tugas-4");
-        Console.WriteLine("5. Tugas-5");
+        Console.WriteLine("1. Tugas-1 ( Membuat Segitiga Alfabet )");
+        Console.WriteLine("2. Tugas-2 ( Membuat Segitiga Angka )");
+        Console.WriteLine("3. Tugas-3 ( Membuat Faktorial )");
+        Console.WriteLine("4. Tugas-4 ( Membuat Reverse String / number )");
+        Console.WriteLine("5. Tugas-5 ( Converter Angka To String )");
         Console.WriteLine("6. Exit");
         int flag = 0; // Untuk Savepoint
 
@@ -94,22 +98,51 @@ public class Assignment1{
                 case 4:{
                     Console.WriteLine("MASUKAN SUSUNAN KATA / STRING / NOMER = ");
                     string str = Console.ReadLine();
+                    int getlast = str.Length;
                     char[] arrstr = new char[str.Length];
                     for(int i = 0;i<str.Length;i++){
                         arrstr[i] = str[i];
                     }
-                    foreach(char c in arrstr){
-                        Console.WriteLine(c);
+                    for(int c = 0 ;c < str.Length;c++){
+                        Console.Write(arrstr[getlast-1]);
+                        getlast--;
                     }
                     flag = 1;
                     break;
 
                 }
                 case 5:{
-                    Console.WriteLine("Test");
+                    Console.WriteLine("MASUKAN INPUT ANGKA ");
+                    string number = Console.ReadLine();
+                    string[] arrstr = new string [number.Length];
+                    for(int i = 0;i<number.Length;i++){
+                        string temporary = number[i].ToString();
+                        int numbers = int.Parse(temporary);
+                        if(numbers == 1){
+                            arrstr[i] = "ONE";
+                        }else if(numbers == 2){
+                            arrstr[i] = "TWO";
+                        }else if(numbers == 3){
+                            arrstr[i] = "THREE";
+                        }else if(numbers == 4){
+                            arrstr[i] = "FOUR";
+                        }else if(numbers == 5){
+                            arrstr[i] = "FIVE";
+                        }else if(numbers == 6){
+                            arrstr[i] = "SIX";
+                        }else if(numbers == 7){
+                            arrstr[i] = "SEVEN";
+                        }else if(numbers == 8){
+                            arrstr[i] = "EIGHT";
+                        }else if(numbers == 9){
+                            arrstr[i] = "NINE";
+                        }
+                    }
+                    for(int j = 0;j<number.Length;j++){
+                        Console.Write(arrstr[j]+" ");
+                    }
                     flag = 1;
                     break;
-
                 }
                 case 6:{
                     flag = 1;
