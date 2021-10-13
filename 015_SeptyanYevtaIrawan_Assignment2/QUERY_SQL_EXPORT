@@ -1,0 +1,233 @@
+create database db_office;
+
+-- CREATE TABLE
+create table tbl_customers(
+	customernumber int identity(1,1) primary key,
+	customername varchar(255),
+	contactlastname varchar(255),
+	contactfirstname varchar(255),
+	phone varchar(255),
+	addressline1 varchar(255),
+	addressline2 varchar(255),
+	city varchar(255),
+	state varchar(255),
+	postalcode varchar(255),
+	country varchar(255),
+	salesrepemployeenumber varchar(255),
+	creditlimit int
+);
+
+create table tbl_products(
+	productcode int identity(1,1) primary key,
+	productname varchar(255),
+	productline int,
+	productscale varchar(255),
+	productvendor varchar(255),
+	productdesc varchar(255),
+	quantityinstock int,
+	buyprice int,
+	msrp int
+);
+create table tbl_productlines(
+	productline int identity(1,1) primary key,
+	textdesc varchar(255),
+	htmldesc varchar(255),
+	image varchar(255)
+);
+
+create table tbl_orders(
+	ordernumber int identity(1,1) primary key,
+	orderdate date,
+	requireddate date,
+	status varchar(10),
+	comments varchar(255),
+	customernumber int
+);
+
+create table tbl_orderdetail(
+	idorder int identity(1,1) primary key,
+	ordernumber int,
+	productcode int,
+	quantityordered int,
+	priceeach int,
+	orderlinenumber int
+);
+
+create table tbl_payment(
+	checknumber int identity(1,1) primary key,
+	customernumber int,
+	paymentdate date,
+	amount int
+);
+
+create table employee(
+	employeenumber int identity(1,1) primary key,
+	lastname varchar(255),
+	firstname varchar(255),
+	extension varchar(255),
+	email varchar(255),
+	officecode int,
+	repotrTo varchar(255),
+	jobTitle varchar(255)
+);
+
+create table tbl_offices(
+	officecode int identity(1,1) primary key,
+	city varchar(20),
+	phone varchar(20),
+	addressline1 varchar(255),
+	addressline2 varchar(255),
+	stat varchar(50),
+	country varchar(50),
+	postalcode varchar(20),
+	territory varchar(30)
+);
+
+-- ADD FOREIGN KEY
+ALTER TABLE tbl_orderdetail 
+ADD CONSTRAINT FK_Productcode FOREIGN KEY (productcode)     
+    REFERENCES tbl_products (productcode)     
+    ON DELETE CASCADE    
+    ON UPDATE CASCADE;
+    
+
+ALTER TABLE tbl_products 
+ADD CONSTRAINT FK_productline FOREIGN KEY (productline)     
+    REFERENCES tbl_productlines (productline)     
+    ON DELETE CASCADE    
+    ON UPDATE CASCADE;
+    
+ALTER TABLE tbl_orderdetail 
+ADD CONSTRAINT FK_ordernumber FOREIGN KEY (ordernumber)     
+    REFERENCES tbl_orders (ordernumber)     
+    ON DELETE CASCADE    
+    ON UPDATE CASCADE;
+
+ALTER TABLE tbl_orders 
+ADD CONSTRAINT FK_CustomerNumber FOREIGN KEY (customernumber)     
+    REFERENCES tbl_customers (customernumber)     
+    ON DELETE CASCADE    
+    ON UPDATE CASCADE;
+
+ALTER TABLE employee 
+ADD CONSTRAINT FK_OfficeCode FOREIGN KEY (officecode)     
+    REFERENCES tbl_offices (officecode)     
+    ON DELETE CASCADE    
+    ON UPDATE CASCADE;
+ 
+ ALTER TABLE employee 
+ADD CONSTRAINT FK_EmployeeCustomer FOREIGN KEY (customernumber)     
+    REFERENCES tbl_customers (customernumber)     
+    ON DELETE CASCADE    
+    ON UPDATE CASCADE;
+
+ -- INSERT DATA PRODUCTLINES
+insert into tbl_productlines (textdesc,htmldesc,image) values ('productlines1','productlines1','productlines1img');
+insert into tbl_productlines (textdesc,htmldesc,image) values ('productlines2','productlines2','productlines2img');
+insert into tbl_productlines (textdesc,htmldesc,image) values ('productlines3','productlines3','productlines3img');
+insert into tbl_productlines (textdesc,htmldesc,image) values ('productlines4','productlines4','productlines4img');
+
+-- INSERT DATA PRODUCTS
+insert into tbl_products (productname,productline,productscale,productvendor,productdesc,quantityinstock,buyprice,msrp)
+values('Test1',1,'Test1','Test1','Test1',20,2000,20);
+insert into tbl_products (productname,productline,productscale,productvendor,productdesc,quantityinstock,buyprice,msrp)
+values('Test2',1,'Test2','Test2','Test2',21,2500,22);
+insert into tbl_products (productname,productline,productscale,productvendor,productdesc,quantityinstock,buyprice,msrp)
+values('Test3',2,'Test3','Test3','Test3',22,2600,23);
+insert into tbl_products (productname,productline,productscale,productvendor,productdesc,quantityinstock,buyprice,msrp)
+values('Test4',1,'Test4','Test4','Test4',22,3000,24);
+insert into tbl_products (productname,productline,productscale,productvendor,productdesc,quantityinstock,buyprice,msrp)
+values('Test5',3,'Test5','Test5','Test5',12,5000,25);
+insert into tbl_products (productname,productline,productscale,productvendor,productdesc,quantityinstock,buyprice,msrp)
+values('Test6',3,'Test6','Test6','Test6',13,6000,21);
+insert into tbl_products (productname,productline,productscale,productvendor,productdesc,quantityinstock,buyprice,msrp)
+values('Test7',4,'Test7','Test7','Test7',15,7000,21);
+insert into tbl_products (productname,productline,productscale,productvendor,productdesc,quantityinstock,buyprice,msrp)
+values('Test8',1,'Test8','Test8','Test8',19,1000,20);
+insert into tbl_products (productname,productline,productscale,productvendor,productdesc,quantityinstock,buyprice,msrp)
+values('Test9',2,'Test9','Test9','Test9',20,2000,20);
+insert into tbl_products (productname,productline,productscale,productvendor,productdesc,quantityinstock,buyprice,msrp)
+values('Test10',3,'Test10','Test10','Test10',20,2000,20);
+
+-- Insert Data Customer
+insert into tbl_customers (customername,contactlastname,contactfirstname,phone,addressline1,addressline2,city,state,postalcode,country,salesrepemployeenumber,creditlimit)
+values ('Test1','Test1','Test1','08571234123','Test1','Test1','Test1','Test1','Test1','Test1','Test1',1000000);
+insert into tbl_customers (customername,contactlastname,contactfirstname,phone,addressline1,addressline2,city,state,postalcode,country,salesrepemployeenumber,creditlimit)
+values ('Test2','Test2','Test2','08571234123','Test2','Test2','Test2','Test2','Test2','Test2','Test2',1000000);
+insert into tbl_customers (customername,contactlastname,contactfirstname,phone,addressline1,addressline2,city,state,postalcode,country,salesrepemployeenumber,creditlimit)
+values ('Test3','Test3','Test3','08571234123','Test3','Test3','Test3','Test3','Test3','Test3','Test3',1000000);
+
+-- Insert Data Orders
+
+insert into tbl_orders(orderdate,requireddate,status,comments,customernumber)
+values('2020-10-9','2020-11-8','selesai','Test1',1)
+insert into tbl_orders(orderdate,requireddate,status,comments,customernumber)
+values('2020-10-11','2020-11-11','selesai','Test2',2)
+insert into tbl_orders(orderdate,requireddate,status,comments,customernumber)
+values('2020-05-10','2020-06-08','selesai','Test3',3)
+insert into tbl_orders(orderdate,requireddate,status,comments,customernumber)
+values('2020-08-01','2020-11-08','selesai','Test4',2)
+insert into tbl_orders(orderdate,requireddate,status,comments,customernumber)
+values('2020-10-9','2020-11-8','selesai','Test5',2)
+
+-- Insert Order Detail
+insert into tbl_orderdetail (productcode,quantityordered,priceeach,orderlinenumber,ordernumber)
+values(2,20,2000,12,1)
+insert into tbl_orderdetail (productcode,quantityordered,priceeach,orderlinenumber,ordernumber)
+values(5,20,2000,12,2)
+insert into tbl_orderdetail (productcode,quantityordered,priceeach,orderlinenumber,ordernumber)
+values(3,20,2000,12,3)
+insert into tbl_orderdetail (productcode,quantityordered,priceeach,orderlinenumber,ordernumber)
+values(7,20,2000,12,4)
+insert into tbl_orderdetail (productcode,quantityordered,priceeach,orderlinenumber,ordernumber)
+values(5,20,2000,12,5)
+
+-- INSERT DATA PAYMENTS
+
+insert into tbl_payment (customernumber,paymentdate,amount)
+values (1,'2020-10-01',10000000)
+insert into tbl_payment (customernumber,paymentdate,amount)
+values (2,'2020-09-01',10000000)
+insert into tbl_payment (customernumber,paymentdate,amount)
+values (3,'2020-11-01',10000000)
+insert into tbl_payment (customernumber,paymentdate,amount)
+values (2,'2020-12-01',10000000)
+insert into tbl_payment (customernumber,paymentdate,amount)
+values (2,'2020-05-01',10000000)
+
+
+-- Insert DATA OFfice
+insert into tbl_offices (city,phone,addressline1,addressline2,stat,country,postalcode,territory)
+values('Test1','08912312','Test1','Test1','Test1','Test1','59129','Test1')
+insert into tbl_offices (city,phone,addressline1,addressline2,stat,country,postalcode,territory)
+values('Test2','08912312','Test2','Test2','Test2','Test2','59129','Test2')
+insert into tbl_offices (city,phone,addressline1,addressline2,stat,country,postalcode,territory)
+values('Test3','08912312','Test3','Test3','Test3','Test3','59129','Test3')
+
+-- Insert Empolyee
+
+insert into employee (lastname,firstname,extension,email,officecode,repotrTo,jobTitle,customernumber)
+values('Test1','Test1','Test1','Test1@Gmail.com',1,'Test1','Test1',1)
+insert into employee (lastname,firstname,extension,email,officecode,repotrTo,jobTitle,customernumber)
+values('Test2','Test2','Test3','Test2@Gmail.com',2,'Test2','Test2',2)
+insert into employee (lastname,firstname,extension,email,officecode,repotrTo,jobTitle,customernumber)
+values('Test3','Test3','Test2','Test3@Gmail.com',3,'Test3','Test3',3)
+
+-- Show All Data 
+select a1.*,a2.*,a3.*,a4.*,a5.*,a6.*,a7.*,a8.* from tbl_customers a1 
+full join employee a2 on a1.customernumber = a2.customernumber
+full join tbl_offices a3 on a3.officecode = a2.officecode
+full join tbl_payment a4 on a4.customernumber = a1.customernumber 
+full join tbl_orders a5 on a5.customernumber = a1.customernumber 
+full join tbl_orderdetail a6 on a6.ordernumber = a5.ordernumber 
+full join tbl_products a7 on a7.productcode = a6.productcode 
+full join tbl_productlines a8 on a8.productline = a7.productline;
+
+-- Show Data Customer With Employee and OFfice
+select a1.*,a2.* from tbl_customers a1 
+join employee a3 on a3.customernumber = a1.customernumber 
+join tbl_offices a2 on a2.officecode = a3.officecode 
+
+-- Show Product with productlines
+select a1.*,a2.* from tbl_products a1
+join tbl_productlines a2 on a1.productline = a2.productline 
