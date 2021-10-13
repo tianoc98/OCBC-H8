@@ -1,0 +1,104 @@
+/* A */
+create database db_staff;
+
+/* B */
+
+CREATE table tbl_data_staff(
+	id_statt int identity(1,1) primary key,
+	nik int,
+	nama varchar(255),
+	alamat varchar(255),
+	handphone varchar(50)
+);
+
+/* C DAN D*/
+INSERT INTO tbl_data_staff(nik,nama,alamat,handphone) values(
+	1,'septyan','pati','089636574682'
+);
+INSERT INTO tbl_data_staff(nik,nama,alamat,handphone) values(
+	2,'agus','semarang','08888282828'
+);
+INSERT INTO tbl_data_staff(nik,nama,alamat,handphone) values(
+	3,'ref','bandung','08828282881'
+);
+INSERT INTO tbl_data_staff(nik,nama,alamat,handphone) values(
+	4,'aris','solo','092837109'
+);
+INSERT INTO tbl_data_staff(nik,nama,alamat,handphone) values(
+	5,'ivan','bekasi','088882811'
+);
+
+select * from tbl_data_staff ;
+
+/* E */
+ALTER TABLE tbl_data_staff add joindate date;
+
+INSERT INTO tbl_data_staff(nik,nama,alamat,handphone,joindate) values(
+	6,'asd','bekasi','088882811','2010-09-13'
+);
+INSERT INTO tbl_data_staff(nik,nama,alamat,handphone,joindate) values(
+	7,'dsa','bekasi','088882811','2011-08-13'
+);
+/* F */
+SELECT TOP 2 * from tbl_data_staff;
+/* G */
+SELECT TOP 3 * from tbl_data_staff;
+
+/* H */
+CREATE table tbl_staffoutsource(
+	id_statt int identity(1,1) primary key,
+	nik int,
+	nama varchar(255),
+	alamat varchar(255),
+	handphone varchar(50),
+	joindate date
+);
+
+DELETE from tbl_data_staff where id_statt > 7;
+
+/* I */
+INSERT INTO tbl_staffoutsource(nik,nama,alamat,handphone,joindate) values(
+	1,'asd','bekasi','088882811','2010-09-13'
+);
+INSERT INTO tbl_staffoutsource(nik,nama,alamat,handphone,joindate) values(
+	2,'dsa','bekasi','088882811','2011-08-13'
+);
+INSERT INTO tbl_staffoutsource(nik,nama,alamat,handphone,joindate) values(
+	6,'asd','bekasi','088882811','2010-09-10'
+);
+INSERT INTO tbl_staffoutsource(nik,nama,alamat,handphone,joindate) values(
+	6,'asd','bekasi','088882811','2010-09-10'
+);
+INSERT INTO tbl_staffoutsource(nik,nama,alamat,handphone,joindate) values(
+	6,'asd','bekasi','088882811','2010-09-10'
+);
+INSERT INTO tbl_staffoutsource(nik,nama,alamat,handphone,joindate) values(
+	6,'asd','bekasi','088882811','2010-09-10'
+);
+INSERT INTO tbl_staffoutsource(nik,nama,alamat,handphone,joindate) values(
+	6,'asd','bekasi','088882811','2010-09-10'
+);
+INSERT INTO tbl_staffoutsource(nik,nama,alamat,handphone,joindate) values(
+	6,'asd','bekasi','088882811','2010-09-10'
+);
+INSERT INTO tbl_staffoutsource(nik,nama,alamat,handphone,joindate) values(
+	6,'asd','bekasi','088882811','2010-09-10'
+);
+INSERT INTO tbl_staffoutsource(nik,nama,alamat,handphone,joindate) values(
+	6,'asd','bekasi','088882811','2010-09-10'
+);
+
+select *from tbl_staffoutsource ;
+
+/* J */
+select st.*,ds.* from tbl_data_staff st join tbl_staffoutsource ds on st.joindate = ds.joindate;
+
+
+/* K */
+select st.*,ds.* from tbl_data_staff st right join tbl_staffoutsource ds on st.joindate = ds.joindate;
+
+/* L */
+select st.*,ds.*from tbl_data_staff st left join tbl_staffoutsource ds on st.joindate = ds.joindate;
+
+/*M */
+select st.*,ds.* from tbl_data_staff st full outer join tbl_staffoutsource ds on st.joindate = ds.joindate;
