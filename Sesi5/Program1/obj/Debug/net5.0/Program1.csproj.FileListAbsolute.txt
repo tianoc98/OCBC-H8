@@ -1,0 +1,16 @@
+C:\File\OCBC NISP\C#\Sesi5\Program1\obj\Debug\net5.0\Program1.csproj.AssemblyReference.cache
+C:\File\OCBC NISP\C#\Sesi5\Program1\obj\Debug\net5.0\Program1.GeneratedMSBuildEditorConfig.editorconfig
+C:\File\OCBC NISP\C#\Sesi5\Program1\obj\Debug\net5.0\Program1.AssemblyInfoInputs.cache
+C:\File\OCBC NISP\C#\Sesi5\Program1\obj\Debug\net5.0\Program1.AssemblyInfo.cs
+C:\File\OCBC NISP\C#\Sesi5\Program1\obj\Debug\net5.0\Program1.csproj.CoreCompileInputs.cache
+C:\File\OCBC NISP\C#\Sesi5\Program1\bin\Debug\net5.0\Program1.exe
+C:\File\OCBC NISP\C#\Sesi5\Program1\bin\Debug\net5.0\Program1.deps.json
+C:\File\OCBC NISP\C#\Sesi5\Program1\bin\Debug\net5.0\Program1.runtimeconfig.json
+C:\File\OCBC NISP\C#\Sesi5\Program1\bin\Debug\net5.0\Program1.runtimeconfig.dev.json
+C:\File\OCBC NISP\C#\Sesi5\Program1\bin\Debug\net5.0\Program1.dll
+C:\File\OCBC NISP\C#\Sesi5\Program1\bin\Debug\net5.0\ref\Program1.dll
+C:\File\OCBC NISP\C#\Sesi5\Program1\bin\Debug\net5.0\Program1.pdb
+C:\File\OCBC NISP\C#\Sesi5\Program1\obj\Debug\net5.0\Program1.dll
+C:\File\OCBC NISP\C#\Sesi5\Program1\obj\Debug\net5.0\ref\Program1.dll
+C:\File\OCBC NISP\C#\Sesi5\Program1\obj\Debug\net5.0\Program1.pdb
+C:\File\OCBC NISP\C#\Sesi5\Program1\obj\Debug\net5.0\Program1.genruntimeconfig.cache
