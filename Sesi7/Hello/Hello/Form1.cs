@@ -28,10 +28,10 @@ namespace Hello
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            db.ExecuteSelect("SELECT * FROM `tbl_user` where username ='" + username.Text + "' and password ='" + password + "'");
-            if(db.Count() == 1)
+            db.ExecuteSelect("SELECT * FROM `tbl_user` where username='" + username.Text + "' and password='" + password.Text + "'");
+            if (db.Count() == 1)
             {
-                MessageBox.Show("Success You Will Login as " + db.Results(0, "names"));
+                MessageBox.Show("Success You Will Login as " + db.Results(0, "name"));
                 this.Close();
             }
             else
