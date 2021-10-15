@@ -1,0 +1,8 @@
+C:\File\OCBC NISP\C#\Sesi9\Kanto_WEBAPI\Kanto_WEBAPI\obj\Debug\net5.0\Kantor_WEBAPI.csproj.AssemblyReference.cache
+C:\File\OCBC NISP\C#\Sesi9\Kanto_WEBAPI\Kanto_WEBAPI\obj\Debug\net5.0\Kantor_WEBAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\File\OCBC NISP\C#\Sesi9\Kanto_WEBAPI\Kanto_WEBAPI\obj\Debug\net5.0\Kantor_WEBAPI.AssemblyInfoInputs.cache
+C:\File\OCBC NISP\C#\Sesi9\Kanto_WEBAPI\Kanto_WEBAPI\obj\Debug\net5.0\Kantor_WEBAPI.AssemblyInfo.cs
+C:\File\OCBC NISP\C#\Sesi9\Kanto_WEBAPI\Kanto_WEBAPI\obj\Debug\net5.0\Kantor_WEBAPI.csproj.CoreCompileInputs.cache
+C:\File\OCBC NISP\C#\Sesi9\Kanto_WEBAPI\Kanto_WEBAPI\obj\Debug\net5.0\Kantor_WEBAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\File\OCBC NISP\C#\Sesi9\Kanto_WEBAPI\Kanto_WEBAPI\obj\Debug\net5.0\Kantor_WEBAPI.RazorAssemblyInfo.cache
+C:\File\OCBC NISP\C#\Sesi9\Kanto_WEBAPI\Kanto_WEBAPI\obj\Debug\net5.0\Kantor_WEBAPI.RazorAssemblyInfo.cs
