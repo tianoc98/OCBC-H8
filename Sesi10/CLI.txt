@@ -1,1 +1,4 @@
 dotnet new webapi -n "TodoApp" -lang "C#" -au none ( create project ) 
+Entity & Sqllite 
+dotnet add package MicrosoftEntityFrameworkCore.Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.Tools
