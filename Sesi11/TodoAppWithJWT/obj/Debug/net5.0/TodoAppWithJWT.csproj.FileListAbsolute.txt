@@ -142,3 +142,4 @@ C:\File\OCBC NISP\C#\Sesi11\TodoAppWithJWT\obj\Debug\net5.0\TodoAppWithJWT.dll
 C:\File\OCBC NISP\C#\Sesi11\TodoAppWithJWT\obj\Debug\net5.0\ref\TodoAppWithJWT.dll
 C:\File\OCBC NISP\C#\Sesi11\TodoAppWithJWT\obj\Debug\net5.0\TodoAppWithJWT.pdb
 C:\File\OCBC NISP\C#\Sesi11\TodoAppWithJWT\obj\Debug\net5.0\TodoAppWithJWT.genruntimeconfig.cache
+C:\File\OCBC NISP\C#\Sesi11\TodoAppWithJWT\bin\Debug\net5.0\package-lock.json
