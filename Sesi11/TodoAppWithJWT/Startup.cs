@@ -1,23 +1,25 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Microsoft.EntityFrameworkCore;
 using TodoAppWithJWT.Configuration;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using System.Text;
+using TodoAppWithJWT.Data;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
-using TodoAppWithJWT.Data;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.AspNetCore.Authorization;
 namespace TodoAppWithJWT
 {
     public class Startup
@@ -52,12 +54,13 @@ namespace TodoAppWithJWT
                         {
                             Name = "Authorization",
                             Type = SecuritySchemeType.ApiKey,
-                            Scheme = "Bearer",
+                            Scheme = JwtBearerDefaults.AuthenticationScheme.ToLowerInvariant(),
                             BearerFormat = "JWT",
                             In = ParameterLocation.Header,
                             Description =
                                 "Enter 'Bearer' [space] and then your valid token in the text input below.\r\n\r\nExample: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\""
                         });
+                        swagger.OperationFilter<AuthResponsesOperationFilter>();
                     swagger
                         .AddSecurityRequirement(new OpenApiSecurityRequirement {
                             {
@@ -72,12 +75,18 @@ namespace TodoAppWithJWT
                             }
                         });
                 });
+
+
             services.AddDbContext<ApiDbContext>(options => 
                 options.UseSqlite(
                     Configuration.GetConnectionString("DefaultConnection")
                 ));
 
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Open", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            });
 
             var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
             var tokenValidationParams = new TokenValidationParameters{
@@ -126,7 +135,7 @@ namespace TodoAppWithJWT
             }
             
             app.UseAuthentication();
-        
+            // app.UseHttpsRedirection();
             app.UseRouting();
 
             app.UseAuthorization();
@@ -135,6 +144,49 @@ namespace TodoAppWithJWT
             {
                 endpoints.MapControllers();
             });
+        }
+    }
+    internal class AuthResponsesOperationFilter : IOperationFilter
+    {
+        public void Apply(OpenApiOperation operation, OperationFilterContext context)
+        {
+            var attributes = context.MethodInfo.DeclaringType.GetCustomAttributes(true)
+                                .Union(context.MethodInfo.GetCustomAttributes(true));
+
+            if (attributes.OfType<IAllowAnonymous>().Any())
+            {
+                return;
+            }
+
+            var authAttributes = attributes.OfType<IAuthorizeData>();
+
+            if (authAttributes.Any())
+            {
+                operation.Responses["401"] = new OpenApiResponse { Description = "Unauthorized" };
+
+                if (authAttributes.Any(att => !String.IsNullOrWhiteSpace(att.Roles) || !String.IsNullOrWhiteSpace(att.Policy)))
+                {
+                    operation.Responses["403"] = new OpenApiResponse { Description = "Forbidden" };
+                }
+
+                operation.Security = new List<OpenApiSecurityRequirement>
+                {
+                    new OpenApiSecurityRequirement
+                    {
+                        {
+                            new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference
+                                {
+                                    Id = "BearerAuth",
+                                    Type = ReferenceType.SecurityScheme
+                                }
+                            },
+                            Array.Empty<string>()
+                        }
+                    }
+                };
+            }
         }
     }
 }
