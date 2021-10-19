@@ -27,15 +27,11 @@ namespace UnitTest_Mock2.Services
             return name;
         }
 
-        public async Task<Employee> GetEmployeeDetail(int EmpID)
+        public async Task<Employee> GetEmployeeDetails(int EmpID)
         {
             var emp = await _appDbContext.Employee.FirstOrDefaultAsync(c => c.Id == EmpID);
             return emp;
         }
 
-        public Task<Employee> GetEmployeeDetails(int EmpID)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -58,7 +58,6 @@ namespace UnitTest_Mock2
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
