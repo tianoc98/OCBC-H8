@@ -7,12 +7,9 @@ using UnitTest_Mock.Models;
 
 namespace UnitTest_Mock.Services
 {
-    public class IEmployeeServices
+    public interface IEmployeeServices
     {
-        public interface IEmployeeService
-        {
-            Task<string> GetEmployeeById(int EmpID);
-            Task<Employee> GetEmployeeDetails(int EmpID);
-        }
+        Task<string> GetEmployeeById(int EmpID);
+        Task<Employee> GetEmployeeDetails(int EmpID);
     }
 }

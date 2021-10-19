@@ -7,11 +7,11 @@ using UnitTest_Mock.Models;
 
 namespace UnitTest_Mock.Model
 {
-    public partial class AppDbContext : DbContext
+    public partial class ApiDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
         {
         }
-        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Employee> Employee { get; set; }
     }
 }
