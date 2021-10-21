@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "ffbe2a45-8181-4803-9434-8883f19063cc",
+		"name": "FinalProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/Payments/update/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEwYjM2NTM4LWVhYWEtNGJlMC1hOGFiLWIxZmJjMWYyZDk5NyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImEyZTZhZGM3LTA2ZDUtNDcwMi1iMjlhLWU2NGJmZDVlYTNkOSIsIm5iZiI6MTYzNDgxODg3NywiZXhwIjoxNjM0ODIwNjc3LCJpYXQiOjE2MzQ4MTg4Nzd9.4oAaac2GiE1wCIwO13AHol7NszBgqxY0kwa612x_tdY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 4,\r\n    \"pay\": 0,\r\n    \"detailsPayment\": \"UpdatedID4\",\r\n    \"customerName\": \"string\",\r\n    \"paymentDate\": \"2021-10-21T12:12:24.338Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Payments/update/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Payments",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Payments/5",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEwYjM2NTM4LWVhYWEtNGJlMC1hOGFiLWIxZmJjMWYyZDk5NyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImEyZTZhZGM3LTA2ZDUtNDcwMi1iMjlhLWU2NGJmZDVlYTNkOSIsIm5iZiI6MTYzNDgxODg3NywiZXhwIjoxNjM0ODIwNjc3LCJpYXQiOjE2MzQ4MTg4Nzd9.4oAaac2GiE1wCIwO13AHol7NszBgqxY0kwa612x_tdY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Payments/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Payments",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Payments/3",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEwYjM2NTM4LWVhYWEtNGJlMC1hOGFiLWIxZmJjMWYyZDk5NyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImEyZTZhZGM3LTA2ZDUtNDcwMi1iMjlhLWU2NGJmZDVlYTNkOSIsIm5iZiI6MTYzNDgxODg3NywiZXhwIjoxNjM0ODIwNjc3LCJpYXQiOjE2MzQ4MTg4Nzd9.4oAaac2GiE1wCIwO13AHol7NszBgqxY0kwa612x_tdY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Payments/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Payments",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/Payments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEwYjM2NTM4LWVhYWEtNGJlMC1hOGFiLWIxZmJjMWYyZDk5NyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImEyZTZhZGM3LTA2ZDUtNDcwMi1iMjlhLWU2NGJmZDVlYTNkOSIsIm5iZiI6MTYzNDgxODg3NywiZXhwIjoxNjM0ODIwNjc3LCJpYXQiOjE2MzQ4MTg4Nzd9.4oAaac2GiE1wCIwO13AHol7NszBgqxY0kwa612x_tdY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Payments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Payments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/AuthManagement/RefreshToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEwYjM2NTM4LWVhYWEtNGJlMC1hOGFiLWIxZmJjMWYyZDk5NyIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImp0aSI6ImEyZTZhZGM3LTA2ZDUtNDcwMi1iMjlhLWU2NGJmZDVlYTNkOSIsIm5iZiI6MTYzNDgxODg3NywiZXhwIjoxNjM0ODIwNjc3LCJpYXQiOjE2MzQ4MTg4Nzd9.4oAaac2GiE1wCIwO13AHol7NszBgqxY0kwa612x_tdY\",\r\n    \"refreshToken\" : \"V6F7U79G5PLTSCZQXMOTD8FUBP9JTDJBZ3P775a73e0-12aa-4f66-9ffc-5ce392eb6f30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/AuthManagement/RefreshToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"AuthManagement",
+						"RefreshToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/AuthManagement/Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :  \"test@gmail.com\",\r\n    \"password\" : \"Mikado@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/AuthManagement/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"AuthManagement",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/AuthManagement/Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\",\r\n    \"email\" :  \"test@gmail.com\",\r\n    \"password\" : \"Mikado@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/AuthManagement/Register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"AuthManagement",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

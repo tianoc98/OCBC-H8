@@ -1,0 +1,75 @@
+Setiap Endpoint
+
+/api/AuthManagement/Register Method Post
+
+-> Isikan 
+ "username": "string",
+ "email": "user@example.com",
+ "password": "string" 
+
+Password Harus menggunakan 1 Huruf besar , 1 Symbol , 1 angka minimal nya
+
+
+/api/AuthManagement/Login Method Post 
+
+-> Isikan 
+ "email": "user@example.com",
+ "password": "string" 
+
+Nanti akan meng-generate Token authenthication silahkan di copy -> Di pojok kanan atas ada authenthicatio 
+isikan Bearer ( token ) 
+
+
+​/api​/AuthManagement​/RefreshToken Method Post
+
+-> Isikan 
+Token dan refresh Token 
+
+Untuk mengecheck apakah token masih bisa di gunakan / sudah expired / sudah tidak bisa di gunakan 
+
+/api/Payments Method Get 
+Untuk melihat semua data di dalam table payments
+
+/api/Payments Method Post
+-> Isikan 
+  "pay": 0,
+  "detailsPayment": "string",
+  "customerName": "string",
+  "paymentDate": "2021-10-21T12:12:24.338Z"
+
+Untuk meng create data di dalam table payments
+
+
+​/api​/Payments​/{id} method Get 
+-> Isikan ID yang ingin di lihat data nya 
+
+/api/Payments/{id} Method Delete
+-> Isikan ID yang ingin di delete datanya
+
+/api/Payments/update Method Put
+-> Isikan ID yang ingin di update serta data datanya
+
+
+/api/PaymentsDetails Method Get 
+-> Untuk melihat semua data di table CardInfo
+
+/api/PaymentsDetails Method Post 
+-> Isikan {
+  "customerName": "string",
+  "cardName": "string",
+  "cardInfo": "string",
+  "securityCode": "string"
+}
+
+Untuk mengcreate data cardinfo / table cardinfo
+
+/api/PaymentsDetails/{id} Method Get 
+
+-> Isikan ID yang ingin di lihat data card nya
+
+
+​/api​/PaymentsDetails​/{id} Method Delete
+-> Isikan ID yang Ingin di hapus datanya 
+
+/api/PaymentsDetails/update Method Put 
+-> isikan ID yang ingin di update serta data data nya
