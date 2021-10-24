@@ -1,4 +1,10 @@
-Setiap Endpoint
+Untuk menggunakan Aplikasi : 
+1. Buka XAMPP dan jalankan apache dan mysql
+2. Jalankan dotnet run 
+3. Akses local api menggunakan swagger UI : http://localhost:5000/swagger/index.html
+4. Register dan login terlebih dahulu untuk mendapatkan token yang digunakan untuk Endpoint Payments dan Payments details
+
+untuk menggunakan Setiap Endpoint
 
 /api/AuthManagement/Register Method Post
 
